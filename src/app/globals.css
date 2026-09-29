@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 213 55% 98%;
+    --foreground: 216 65% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 216 65% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 65% 17%;
+
+    --primary: 216 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 212 65% 95%;
+    --secondary-foreground: 216 65% 17%;
+
+    --muted: 213 40% 95%;
+    --muted-foreground: 215 22% 42%;
+
+    --accent: 212 80% 95%;
+    --accent-foreground: 216 85% 38%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 38% 89%;
+    --input: 214 38% 89%;
+    --ring: 216 100% 50%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-blue-600/15 selection:text-blue-900;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(219, 238, 255, 0.55) 0px, transparent 45%),
+      radial-gradient(at 100% 15%, rgba(218, 247, 236, 0.45) 0px, transparent 40%),
+      radial-gradient(at 50% 100%, rgba(254, 246, 230, 0.4) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+/* Custom subtle scrollbars for desktop tables and sidebar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.65);
+}
